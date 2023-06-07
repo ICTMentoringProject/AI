@@ -19,13 +19,18 @@ import audiorecorder as ar
 ar.audio_Recording()
 ```
 ## wav2vec finetuning model test
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1ivNAAOqhs-YKhXLosWXeBKxzC9QS67Do?authuser=2#scrollTo=GeDLkgVyk_an&line=1&uniqifier=1) (별도 세팅 없이 바로 실행 가능)
 
-"wav2vec-base no fine-tune" 모델을 AI openAPI 내 한국인의 영어 발화 데이터셋으로 파인튜닝 후 2가지 음성 파일로 성능 체크  <br>  
-학습된 모델과 토크나이저를 huggingface에 탑재 후 이를 불러와 간단하게 음성 인식 결과를 볼 수 있습니다. 직접 녹음한 wav 파일을 불러와 전처리 후 모델에 넣기 용이합니다.  
-<br>
-상세 코드는 추후 탑재 예정입니다.
+#### 1. korean_en_model_960h.ipynb 
+: wav2vec_base_960h_finetune model을 한국인의 영어 발화 데이터로 한번 더 파인튜닝하고 허깅페이스에 업로드한 코드
+#### 2. model_test_0607.ipynb
+: 위에서 학습된 모델을 불러와 샘플 음성 데이터 3종의 인식결과를 보여주는 코드
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1eWZ-0BWQ9fBl5MZlmA_XWDgoiDGXNt3F?authuser=2#scrollTo=GeDLkgVyk_an&line=1&uniqifier=1) (별도 세팅 없이 바로 실행 가능)  
+<br>**최종 모듈에 탑재하기 위한 모델을 사전학습하는 과정**
 
+앞서 wav2vec-base_no_finetune 모델을 동일 데이터셋으로 파인튜닝 한 모델 대비 성능 개선   
+> (기존)butw what if somebody dewcides to brak it ecarful that youkeepw atat curverigww but louk for wplacs to save mony maybew itw's wtakwing longerto get thing wswcward away than 
+
+>(개선)but what ive somebody decides to breake it  careful that you keep atequate coverage but look for places to save money maybe it's taking longer to get things s quared away than
 
 [데이터 출처](https://aiopen.etri.re.kr/voiceModel)  
 :5000개(50명*100발화)  
